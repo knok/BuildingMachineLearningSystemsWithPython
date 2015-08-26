@@ -147,7 +147,7 @@ def parsexml(filename):
 
 with open(os.path.join(DATA_DIR, filename_filtered), "w") as f:
     for item in parsexml(filename):
-        line = "\t".join(map(str, item))
+        line = "\t".join(map(unicode, item))
         f.write(line.encode("utf-8") + "\n")
 
 with open(os.path.join(DATA_DIR, "filtered-meta.json"), "w") as f:
