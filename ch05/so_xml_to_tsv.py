@@ -83,8 +83,8 @@ def parsexml(filename):
 
     counter = 0
 
-    it = map(itemgetter(1),
-             iter(etree.iterparse(filename, events=('start',))))
+    it = iter(map(itemgetter(1),
+             iter(etree.iterparse(filename, events=('start',)))))
     root = next(it)  # get posts element
 
     for elem in it:
